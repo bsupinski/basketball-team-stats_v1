@@ -1,8 +1,6 @@
 import constants
 from helpers import clean_list, enter_option
 
-player_list = constants.PLAYERS
-
 def introduction():
     print("\n\nBasketball Team Stats Tool\n\n     --Menu--\n\n")
     print("\nHere are your choices: \nA) Display Team stats\nB) Quit")
@@ -22,6 +20,7 @@ def choose_team():
     return enter_option()
 
 if __name__ == "__main__":
+    player_list = clean_list(constants.PLAYERS)
     introduction()
     menu_choice()
     choose_team()
