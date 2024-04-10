@@ -31,3 +31,9 @@ def clean_list(lst):
     change_to_bool(lst) 
     get_guardians(lst)
     change_to_int(lst)
+    return lst
+
+
+def display_players(lst):
+    for index, player in enumerate(lst, 1):
+        print(f"{index}: {player['name']}\n{player['guardians']}\n{player['experience']}\n{player['height']}\n")
